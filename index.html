@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Tutor Portfolio</title>
+  <link rel="icon" type="image/png" href="images/study.png" sizes="512x512">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- AOS CSS for Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+<!-- Navbar -->
+<nav class="bg-blue-600 p-4 fixed w-full top-0 z-50 shadow-lg select-none" data-aos="fade-down" data-aos-duration="800">
+  <div class="max-w-screen-xl mx-auto flex justify-between items-center px-4">
+
+    <!-- Logo & Brand -->
+<div class="flex items-center space-x-3">
+  <img src="images/study.png" alt="Logo" class="h-12 w-12" draggable="false">
+  <a href="#home" class="text-white text-2xl font-bold hover:text-gray-200 transition duration-300">Math Tutor</a>
+</div>
+
+
+    <!-- Desktop Nav Links -->
+    <ul id="nav-menu" class="hidden md:flex space-x-10 select-none">
+      <li>
+        <a href="#home" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          Home
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          About Me & Courses
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#hire" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          Hire Me
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#faqs" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          FAQs
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#access" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          Get Access
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="relative text-white text-lg font-medium transition-colors duration-300 hover:text-gray-200 group">
+          Contact Me
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-200 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button (Fix Position) -->
+    <div class="md:hidden ml-auto select-none">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-blue-600 shadow-lg md:hidden transition-all duration-300 ease-in-out select-none">
+      <ul class="flex flex-col items-center space-y-2 py-4">
+        <li><a href="#home" class="block text-white py-2">Home</a></li>
+        <li><a href="#about" class="block text-white py-2">About Me & Courses</a></li>
+        <li><a href="#hire" class="block text-white py-2">Hire Me</a></li>
+        <li><a href="#faqs" class="block text-white py-2">FAQs</a></li>
+        <li><a href="#access" class="block text-white py-2">Get Access</a></li>
+        <li><a href="#contact" class="block text-white py-2">Contact Me</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  const menu = document.getElementById("mobile-menu");
+  menu.classList.toggle("hidden");
+});
+</script>
+
+
+<!-- Home Section -->
+<section id="home" class="h-screen flex items-center justify-center bg-blue-600 text-white px-6 relative select-none">
+  <div class="text-center max-w-3xl">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight md:[max-height:500px]:text-2xl" data-aos="fade-right" data-aos-duration="1000">
+      Unlock Your Math Potential
+    </h1>
+    <p class="mt-8 text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto md:[max-height:500px]:text-base md:[max-height:500px]:max-w-[80%]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+      Professional math tutoring tailored to your needs. Whether you're struggling with basics or aiming for advanced concepts, I'm here to help you succeed.
+    </p>
+    <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4 md:[max-height:500px]:mt-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      <a href="#hire" class="bg-white text-blue-600 px-6 sm:px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">Hire Me</a>
+      <a href="#access" class="bg-transparent border border-white px-6 sm:px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Get Access</a>
+    </div>
+</div>
+
+  <!-- Running Note with Marquee Animation -->
+  <div class="absolute bottom-20 left-0 w-full bg-transparent z-30 md:[max-height:500px]:bottom-[10px]">
+    <p class="whitespace-nowrap animate-marquee text-base sm:text-lg text-gray-300 opacity-90 font-medium">
+      NOTE: Online service is available only in Pakistan, and home tuition is offered only in Faisalabad.
+    </p>
+  </div>
+
+  <!-- Click-to-Call Floating Button -->
+  <a href="tel:+9203032518663" class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-green-500 text-white px-4 py-3 rounded-full flex items-center shadow-lg transition-all duration-300 hover:scale-110 animate-pulse z-30 md:[max-height:500px]:bottom-[2px] md:[max-height:500px]:right-[2px]">
+    <img src="images/phone-call.png" alt="Call Logo" class="w-5 sm:w-6 h-5 sm:h-6 block" />
+    <span class="ml-2 text-sm sm:text-base font-semibold md:[max-height:500px]:text-sm">+92 304 6616905</span>
+  </a>
+
+<style>
+  /* Tailwind Custom Animation */
+@keyframes marquee {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+animation: marquee 20s linear infinite; /* Slowed down to 20s */
+}
+
+/* Ensure content fits well in landscape mode */
+@media screen and (max-height: 500px) and (min-width: 768px) {
+  #home h1 { font-size: 2rem; } /* Reduce heading size */
+  #home p { font-size: 1rem; max-width: 80%; } /* Adjust paragraph */
+  .mt-8 { margin-top: 4px; } /* Reduce spacing */
+  .absolute.bottom-20 { bottom: 10px; } /* Adjust marquee position */
+  .absolute.bottom-4.right-4 { bottom: 2px; right: 2px; } /* Reduce call button size */
+  .absolute.bottom-4.right-4 span { font-size: 0.8rem; } /* Reduce call button text */
+}
+ </style>
+
+</section>
+
+<script>
+  let timer;
+  const callButton = document.getElementById("callButton");
+
+  callButton.addEventListener("touchstart", function() {
+      timer = setTimeout(function() {
+          navigator.clipboard.writeText("+9203032518663").then(() => {
+              alert("Phone number copied to clipboard!");
+          }).catch(err => console.error("Error copying text: ", err));
+      }, 2000); // 2 seconds long press
+  });
+
+  callButton.addEventListener("touchend", function() {
+      clearTimeout(timer);
+  });
+
+  callButton.addEventListener("mousedown", function() {
+      timer = setTimeout(function() {
+          navigator.clipboard.writeText("+9203032518663").then(() => {
+              alert("Phone number copied to clipboard!");
+          }).catch(err => console.error("Error copying text: ", err));
+      }, 2000);
+  });
+
+  callButton.addEventListener("mouseup", function() {
+      clearTimeout(timer);
+  });
+
+  callButton.addEventListener("mouseleave", function() {
+      clearTimeout(timer);
+  });
+</script>
+
+
+<body class="overflow-hidden">
+  <!-- Main Container -->
+  <div class="relative w-full h-screen overflow-hidden">
+<!-- About Me Section -->
+<section id="about" class="absolute inset-0 swipe-transition select-none">
+  <div class="min-h-screen flex items-center justify-center bg-gray-50 px-3 sm:px-4 py-6 sm:py-8 lg:py-16">
+    <div class="container mx-auto">
+      <!-- Heading -->
+      <div class="text-center mb-5 sm:mb-10" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-xl sm:text-3xl md:text-4xl font-bold text-blue-600">About Me</h2>
+        <div class="mt-1 sm:mt-2 h-1 w-14 sm:w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="flex flex-col md:flex-row items-center gap-5 sm:gap-8">
+        <!-- Image & Info -->
+        <div class="w-full md:w-1/2 flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
+          <img src="images/Me.jpg" alt="Your Name"
+            class="rounded-lg shadow-xl w-28 sm:w-40 md:w-48 lg:w-56 xl:w-64 object-cover border-4 border-white"
+            draggable="false">
+          <div class="mt-3 sm:mt-6 bg-white bg-opacity-90 shadow-lg rounded-lg p-3 sm:p-6 w-40 sm:w-56 md:w-64 text-center">
+            <p class="text-xs sm:text-base font-semibold text-blue-600">Name:
+              <span class="font-normal text-gray-700">Ibrar Tahir</span>
+            </p>
+            <p class="mt-2 text-xs sm:text-base font-semibold text-blue-600">Experience:
+              <span class="font-normal text-gray-700">5+ Years</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center" data-aos="fade-up" data-aos-duration="1000"
+          data-aos-delay="200">
+          <p class="text-base sm:text-xl md:text-2xl font-bold text-blue-600 text-center md:text-left">
+            Dedicated Maths Teacher
+          </p>
+          <p class="mt-2 sm:mt-4 text-xs sm:text-base md:text-lg text-gray-600 text-center md:text-left leading-relaxed">
+            I am a passionate math tutor with over 10 years of experience helping students excel in math. My teaching
+            philosophy focuses on building a strong foundation and fostering a love for learning.
+          </p>
+
+          <!-- Currently Teaching Section -->
+          <p class="mt-5 sm:mt-8 text-base sm:text-xl md:text-2xl font-bold text-blue-600 text-center md:text-left">
+            Currently Teaching
+          </p>
+          <div class="mt-3 sm:mt-6 grid grid-cols-2 gap-3 sm:gap-4 w-[90%] sm:w-full mx-auto">
+            <!-- Teaching Box 1 -->
+            <div class="bg-white bg-opacity-90 shadow-xl rounded-lg p-3 sm:p-6 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 w-full">
+              <h3 class="text-sm sm:text-lg font-semibold text-blue-600">Math & Physics</h3>
+              <p class="mt-1 sm:mt-2 text-gray-700 text-xs sm:text-base">Classes 9 & 10</p>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500">Matriculation</p>
+            </div>
+          
+            <!-- Teaching Box 2 -->
+            <div class="bg-white bg-opacity-90 shadow-xl rounded-lg p-3 sm:p-6 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 w-full">
+              <h3 class="text-sm sm:text-lg font-semibold text-blue-600">Math & statistics</h3>
+              <p class="mt-1 sm:mt-2 text-gray-700 text-xs sm:text-base">Classes 11 & 12</p>
+              <p class="mt-1 text-xs sm:text-sm text-gray-500">Intermediate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+<section id="courses" class="absolute inset-0 swipe-transition transform translate-x-full select-none">
+  <div class="min-h-screen flex items-center justify-center bg-gray-100 py-6 sm:py-12 lg:py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-10 sm:mb-14" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600">Courses We Offer</h2>
+        <div class="mt-2 h-1 w-16 sm:w-20 bg-blue-600 mx-auto"></div>
+        <p class="mt-3 text-sm sm:text-base md:text-lg text-gray-700 max-w-xl mx-auto">
+          Explore my tailored courses designed to help you excel in math, statistics and physics.
+        </p>
+      </div>
+      
+      <!-- Responsive Grid -->
+      <div class="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 pb-6">
+        
+<!-- Course Box 1 -->
+<div class="w-[90%] sm:w-full mx-auto bg-white bg-opacity-90 shadow-lg rounded-lg p-3 sm:p-5 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+  <h3 class="text-base sm:text-lg font-semibold text-blue-600">Matriculation Part 1</h3>
+  <p class="mt-2 text-gray-700 text-xs sm:text-sm">Math & Physics</p>
+  <p class="mt-1 text-xs text-gray-500">Class 9</p>
+</div>
+
+<!-- Course Box 2 -->
+<div class="w-[90%] sm:w-full mx-auto bg-white bg-opacity-90 shadow-lg rounded-lg p-3 sm:p-5 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+  <h3 class="text-base sm:text-lg font-semibold text-blue-600">Matriculation Part 2</h3>
+  <p class="mt-2 text-gray-700 text-xs sm:text-sm">Math & Physics</p>
+  <p class="mt-1 text-xs text-gray-500">Class 10</p>
+</div>
+
+<!-- Course Box 3 -->
+<div class="w-[90%] sm:w-full mx-auto bg-white bg-opacity-90 shadow-lg rounded-lg p-3 sm:p-5 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+  <h3 class="text-base sm:text-lg font-semibold text-blue-600">Intermediate Part 1</h3>
+  <p class="mt-2 text-gray-700 text-xs sm:text-sm">Math & statistics</p>
+  <p class="mt-1 text-xs text-gray-500">Class 11</p>
+</div>
+
+<!-- Course Box 4 -->
+<div class="w-[90%] sm:w-full mx-auto bg-white bg-opacity-90 shadow-lg rounded-lg p-3 sm:p-5 text-center flex flex-col items-center justify-center transition-transform transform hover:scale-105 hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="400">
+  <h3 class="text-base sm:text-lg font-semibold text-blue-600">Intermediate Part 2</h3>
+  <p class="mt-2 text-gray-700 text-xs sm:text-sm">Math & statistics</p>
+  <p class="mt-1 text-xs text-gray-500">Class 12</p>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+<!-- Swipe Button -->
+<button id="swipeButton" 
+  class="absolute top-1/2 right-4 z-10 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-10 h-10 flex items-center justify-center text-lg sm:w-12 sm:h-12 sm:text-2xl font-bold mr-[15px]" 
+  style="transform: translateY(-190%);" 
+  data-aos="fade-up" 
+  data-aos-duration="1000">
+  &rarr;
+</button>
+
+<style>
+  .swipe-transition {
+    transition: transform 0.5s ease-in-out;
+  }
+</style>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swipeButton = document.getElementById("swipeButton");
+    const aboutSection = document.getElementById("about");
+    const coursesSection = document.getElementById("courses");
+
+    if (!aboutSection || !coursesSection) {
+      swipeButton.style.display = "none"; // Hide the button if sections are missing
+      return;
+    }
+
+    let isCoursesVisible = false;
+
+    swipeButton.addEventListener("click", () => {
+      if (isCoursesVisible) {
+        aboutSection.style.transform = "translateX(0%)";
+        coursesSection.style.transform = "translateX(100%)";
+        swipeButton.style.right = "20px";
+        swipeButton.style.left = "auto";
+        swipeButton.innerHTML = "&rarr;";
+      } else {
+        aboutSection.style.transform = "translateX(-100%)";
+        coursesSection.style.transform = "translateX(0%)";
+        swipeButton.style.left = "20px";
+        swipeButton.style.right = "auto";
+        swipeButton.innerHTML = "&larr;";
+      }
+      isCoursesVisible = !isCoursesVisible;
+    });
+  });
+</script>
+
+
+
+
+<!-- Hire Me Section -->
+<section id="hire" class="min-h-screen flex items-center justify-center bg-blue-600 text-white select-none px-6 py-16 md:py-24">
+  <div class="w-full max-w-3xl text-center">
+    <h2 class="text-4xl md:text-5xl font-bold" data-aos="fade-up" data-aos-duration="1000">Hire Me</h2>
+    <p class="mt-8 text-lg md:text-xl text-gray-200 mx-auto max-w-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      Interested in working with me? Fill out the form below, and I'll get back to you shortly.
+    </p>
+    
+    <form id="hireForm" class="mt-12 max-w-lg mx-auto space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-4 rounded-lg text-gray-900 shadow-md" required>
+      <input type="email" id="email" placeholder="Your Email" class="w-full p-4 rounded-lg text-gray-900 shadow-md" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number (e.g., +92XXXXXXXXXX)" class="w-full p-4 rounded-lg text-gray-900 shadow-md" pattern="\+92\d{10}" required>
+      <textarea id="message" placeholder="Your Message" class="w-full p-4 rounded-lg text-gray-900 shadow-md" rows="5" required></textarea>
+      <button type="submit" id="submitBtn" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById("hireForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let phone = document.getElementById("phone").value;
+    let submitBtn = document.getElementById("submitBtn");
+    let nameInput = document.getElementById("name");
+    let emailInput = document.getElementById("email");
+    let phoneInput = document.getElementById("phone");
+    let messageInput = document.getElementById("message");
+    
+    // Validate phone number: Must start with +92 and be 13 characters long
+    if (phone.match(/^\+92\d{10}$/)) {
+      // Disable the button to make it unclickable
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Mail sent successfully ✅";
+      submitBtn.style.backgroundColor = "#28a745"; // Green background
+      submitBtn.style.color = "white";
+      submitBtn.style.transition = "all 0.3s ease-in-out";
+      submitBtn.style.boxShadow = "0px 0px 15px rgba(40, 167, 69, 0.8)"; // Green glow
+
+      // Swing & bounce effect
+      let angle = 0, direction = 1, scale = 1;
+      let swingInterval = setInterval(() => {
+        angle += direction * 10;
+        scale = scale === 1 ? 1.1 : 1; // Bounce effect
+        submitBtn.style.transform = `rotate(${angle}deg) scale(${scale})`;
+        
+        if (angle >= 10 || angle <= -10) direction *= -1;
+      }, 120);
+
+      // Stop swinging after 2.5 seconds
+      setTimeout(() => {
+        clearInterval(swingInterval);
+        submitBtn.style.transform = "rotate(0deg) scale(1)";
+        submitBtn.style.opacity = "0.7";
+      }, 2500);
+
+      // Re-enable the button, reset styles, and clear form fields after 8 seconds
+      setTimeout(() => {
+        submitBtn.innerHTML = "Submit";
+        submitBtn.style.backgroundColor = "";
+        submitBtn.style.color = "";
+        submitBtn.style.opacity = "1";
+        submitBtn.style.boxShadow = "none";
+        submitBtn.style.transform = "scale(1)";
+        submitBtn.disabled = false; // Re-enable the button
+
+        // Clear form fields
+        nameInput.value = "";
+        emailInput.value = "";
+        phoneInput.value = "";
+        messageInput.value = "";
+      }, 8000); // 8 seconds total
+    } else {
+      alert("Please enter a valid phone number starting with +92 and 10 digits (e.g., +923001234567).");
+    }
+  });
+</script>
+
+
+
+<!-- FAQs Section -->
+<section id="faqs" class="py-24 min-h-screen md:min-h-[100vh] flex items-center justify-center bg-gray-100 px-4 select-none">
+  <div class="text-center w-full max-w-3xl min-w-0 break-words">
+      <h2 class="text-4xl md:text-5xl font-bold text-blue-600 mb-4" data-aos="fade-up" data-aos-duration="1000">FAQs</h2>
+      <div class="h-1 w-20 bg-blue-600 mx-auto mb-12" data-aos="fade-up" data-aos-duration="1000"></div>
+      <div class="text-left space-y-8">
+          
+          <!-- FAQ Item -->
+          <div class="faq-item w-full p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 portrait:p-5 landscape:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <div class="faq-toggle font-bold text-lg flex justify-between items-center cursor-pointer">
+                  <span>What subjects do you teach?</span>
+                  <span class="icon text-xl transition-transform duration-300">+</span>
+              </div>
+              <div class="faq-content overflow-hidden break-words transition-all duration-300 ease-out portrait:text-base landscape:text-sm" style="max-height: 0;">
+                  <p class="text-gray-700 pt-2">I teach all levels of math, from basic arithmetic to advanced calculus.</p>
+              </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="faq-item w-full p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 portrait:p-5 landscape:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <div class="faq-toggle font-bold text-lg flex justify-between items-center cursor-pointer">
+                  <span>How much do you charge?</span>
+                  <span class="icon text-xl transition-transform duration-300">+</span>
+              </div>
+              <div class="faq-content overflow-hidden break-words transition-all duration-300 ease-out portrait:text-base landscape:text-sm" style="max-height: 0;">
+                  <p class="text-gray-700 pt-2">My rates vary depending on the level and duration of tutoring. Contact me for details.</p>
+              </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="faq-item w-full p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 portrait:p-5 landscape:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <div class="faq-toggle font-bold text-lg flex justify-between items-center cursor-pointer">
+                  <span>What is your teaching methodology?</span>
+                  <span class="icon text-xl transition-transform duration-300">+</span>
+              </div>
+              <div class="faq-content overflow-hidden break-words transition-all duration-300 ease-out portrait:text-base landscape:text-sm" style="max-height: 0;">
+                  <p class="text-gray-700 pt-2">I focus on building a strong foundation and fostering a love for learning through interactive and engaging lessons.</p>
+              </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="faq-item w-full p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 portrait:p-5 landscape:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+              <div class="faq-toggle font-bold text-lg flex justify-between items-center cursor-pointer">
+                  <span>Do you offer online tutoring?</span>
+                  <span class="icon text-xl transition-transform duration-300">+</span>
+              </div>
+              <div class="faq-content overflow-hidden break-words transition-all duration-300 ease-out portrait:text-base landscape:text-sm" style="max-height: 0;">
+                  <p class="text-gray-700 pt-2">Yes, I offer both in-person and online tutoring sessions for your convenience.</p>
+              </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div class="faq-item w-full p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 portrait:p-5 landscape:p-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+              <div class="faq-toggle font-bold text-lg flex justify-between items-center cursor-pointer">
+                  <span>How do I schedule a session?</span>
+                  <span class="icon text-xl transition-transform duration-300">+</span>
+              </div>
+              <div class="faq-content overflow-hidden break-words transition-all duration-300 ease-out portrait:text-base landscape:text-sm" style="max-height: 0;">
+                  <p class="text-gray-700 pt-2">You can schedule a session by filling out the "Hire Me" form or contacting me directly.</p>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".faq-item").forEach((faq) => {
+            const toggleButton = faq.querySelector(".faq-toggle");
+            const faqContent = faq.querySelector(".faq-content");
+            const icon = toggleButton.querySelector(".icon");
+
+            toggleButton.addEventListener("click", function () {
+                const isOpen = faqContent.style.maxHeight && faqContent.style.maxHeight !== "0px";
+
+                // Close all other FAQs
+                document.querySelectorAll(".faq-content").forEach((openFaq) => {
+                    if (openFaq !== faqContent) {
+                        openFaq.style.maxHeight = "0px";
+                        openFaq.previousElementSibling.querySelector(".icon").textContent = "+";
+                    }
+                });
+
+                // Toggle clicked FAQ
+                if (!isOpen) {
+                    faqContent.style.maxHeight = faqContent.scrollHeight + "px"; // Dynamically adjust height
+                    icon.textContent = "−";
+                } else {
+                    faqContent.style.maxHeight = "0px";
+                    icon.textContent = "+";
+                }
+            });
+        });
+    });
+</script>
+
+
+  
+<!-- Get Access Section -->
+<section id="access" class="min-h-screen flex items-center justify-center bg-blue-600 text-white select-none px-6 py-16 md:py-24">
+  <div class="w-full max-w-3xl text-center">
+    <h2 class="text-4xl md:text-5xl font-bold" data-aos="fade-up" data-aos-duration="1000">Get Access to Content</h2>
+    <p class="mt-8 text-lg md:text-xl text-gray-200 mx-auto max-w-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      Register with your email to access exclusive study materials on Google Drive.
+    </p>
+    
+    <form id="accessForm" class="mt-12 max-w-lg mx-auto space-y-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+      <input type="email" id="accessEmail" placeholder="Your Email" class="w-full p-4 rounded-lg text-gray-900 shadow-md" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      <button type="submit" id="accessBtn" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">
+        Register
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById("accessForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    let email = document.getElementById("accessEmail").value;
+    let accessBtn = document.getElementById("accessBtn");
+    let accessEmailInput = document.getElementById("accessEmail");
+
+    if (email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/)) {
+      // Disable the button to make it unclickable
+      accessBtn.disabled = true;
+      accessBtn.innerHTML = "Access Granted ✅";
+      accessBtn.style.backgroundColor = "#28a745";
+      accessBtn.style.color = "white";
+      accessBtn.style.transition = "all 0.3s ease-in-out";
+      accessBtn.style.boxShadow = "0px 0px 15px rgba(40, 167, 69, 0.8)"; // Green glow
+
+      // Swing & bounce effect
+      let angle = 0, direction = 1, scale = 1;
+      let swingInterval = setInterval(() => {
+        angle += direction * 10;
+        scale = scale === 1 ? 1.1 : 1; // Bounce effect
+        accessBtn.style.transform = `rotate(${angle}deg) scale(${scale})`;
+        
+        if (angle >= 10 || angle <= -10) direction *= -1;
+      }, 120);
+
+      // Stop swinging after 2.5 seconds
+      setTimeout(() => {
+        clearInterval(swingInterval);
+        accessBtn.style.transform = "rotate(0deg) scale(1)";
+        accessBtn.style.opacity = "0.7";
+      }, 2500);
+
+      // Re-enable the button, reset styles, and clear the email field after 8 seconds
+      setTimeout(() => {
+        accessBtn.innerHTML = "Register";
+        accessBtn.style.backgroundColor = "";
+        accessBtn.style.color = "";
+        accessBtn.style.opacity = "1";
+        accessBtn.style.boxShadow = "none";
+        accessBtn.style.transform = "scale(1)";
+        accessBtn.disabled = false; // Re-enable the button
+
+        // Clear the email field
+        accessEmailInput.value = "";
+      }, 8000); // 8 seconds total
+    }
+  });
+</script>
+
+<!-- Connect via WhatsApp Section -->
+<section id="contact" class="min-h-screen flex items-center justify-center bg-gray-100 py-12 select-none">
+  <div class="container mx-auto px-6 lg:px-12">
+    <!-- Heading -->
+    <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600">
+        Connect via WhatsApp
+      </h2>
+      <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-xl mx-auto">
+        Have questions? Feel free to reach out!
+      </p>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 select-none">
+      <!-- Left Side: Form -->
+      <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6 text-center md:text-left">Send a Message</h3>
+        <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+          <div class="space-y-4">
+            <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            <input type="text" id="class" placeholder="Your Class" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+            <textarea id="message" placeholder="Your Message" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Side: Get in Touch -->
+      <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-6 text-center md:text-left">Get in Touch</h3>
+        <p class="text-gray-700 mb-6 leading-relaxed text-center md:text-left">
+          If you have any questions or want to schedule a class, feel free to reach out anytime. Your satisfaction is my priority!
+        </p>
+
+        <div class="space-y-5">
+          <!-- Phone -->
+          <div class="flex items-center justify-center md:justify-start">
+            <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Phone Icon" class="w-6 h-6 mr-3">
+            <a href="tel:+9203032518663" class="text-gray-700 hover:text-blue-600 transition duration-300 text-lg font-medium">+92 304 6616905</a>
+          </div>
+          
+          <!-- Email -->
+          <div class="flex items-center justify-center md:justify-start">
+            <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" class="w-6 h-6 mr-3">
+            <a href="mailto:your.email@example.com" class="text-gray-700 hover:text-blue-600 transition duration-300 text-lg font-medium">Ibrarthemathematician@gmail.com</a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="flex items-center justify-center md:justify-start">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" class="w-6 h-6 mr-3">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="text-gray-700 hover:text-blue-600 transition duration-300 text-lg font-medium">LinkedIn Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const classInfo = document.getElementById("class").value.trim();
+    const message = document.getElementById("message").value.trim();
+  
+    // Format the message concisely
+    const whatsappMessage = `Hello, my name is ${name}.\n📧 Email: ${email}\n📚 Class: ${classInfo}\n📝 Message: ${message}`;
+    
+    // Encode the message using encodeURIComponent
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Check if the message is too long
+    if (encodedMessage.length > 2000) {
+      alert("The message is too long to be sent via WhatsApp. Please shorten it.");
+      return;
+    }
+  
+    // Create the WhatsApp link
+    const whatsappLink = `https://wa.me/9203032518663?text=${encodedMessage}`;
+    
+    // Open the link in a new tab
+    window.open(whatsappLink, "_blank");
+  }
+  </script>
+
+
+<!-- Footer -->
+<footer class="bg-blue-600 text-white py-8 select-none">
+  <div class="container mx-auto max-w-4xl px-4 text-center">
+    
+    <p class="text-lg">&copy; 2025 Math Tutor. All rights reserved.</p>
+    
+    <!-- Quick Links -->
+    <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm md:text-base">
+      <a href="#home" class="hover:text-gray-200">Home</a>
+      <a href="#about" class="hover:text-gray-200">About Me & Courses</a>
+      <a href="#hire" class="hover:text-gray-200">Hire Me</a>
+      <a href="#faqs" class="hover:text-gray-200">FAQs</a>
+      <a href="#access" class="hover:text-gray-200">Get Access</a>
+      <a href="#contact" class="hover:text-gray-200">Contact Me</a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm md:text-base">
+      <a href="https://www.youtube.com/@IbrartheMathematician" target="_blank" class="hover:text-gray-200">
+        YouTube
+      </a>
+      <a href="https://www.linkedin.com" target="_blank" class="hover:text-gray-200">
+        LinkedIn
+      </a>
+    </div>
+    
+  </div>
+</footer>
+
+
+  <!-- AOS JS for Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+ <script>
+      // Initialize AOS
+      AOS.init();
+ </script>
+
+ <script>
+  // Redirect to the home page on page refresh
+  window.onload = function() {
+    if (performance.navigation.type === 1) { // Check if the page was reloaded
+      window.location.href = "#home"; // Redirect to the home page
+    }
+  };
+</script>
+
+</body>
+</html>

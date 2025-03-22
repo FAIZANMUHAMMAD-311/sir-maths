@@ -1,0 +1,11 @@
+    /* Prevent Horizontal Scroll */
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
