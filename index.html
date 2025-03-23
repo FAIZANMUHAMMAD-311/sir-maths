@@ -125,10 +125,14 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
     <span class="ml-2 text-sm sm:text-base font-semibold md:[max-height:500px]:text-sm">+92 304 6616905</span>
   </a>
 
-        <a href="https://www.youtube.com/@IbrarTheMathematician" target="_blank" rel="noopener noreferrer" className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 text-white px-4 py-3 rounded-full flex items-center shadow-lg transition-all duration-300 hover:scale-110 animate-pulse z-30">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" className="w-5 sm:w-6 h-5 sm:h-6 block" />
-          <span className="ml-2 text-sm sm:text-base font-semibold">YouTube</span>
-        </a>
+<!-- YouTube Floating Button -->
+<a href="https://www.youtube.com/@IbrarTheMathematician" target="_blank" rel="noopener noreferrer" class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 text-white px-4 py-3 rounded-full flex items-center shadow-lg transition-all duration-300 hover:scale-110 animate-pulse z-30">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" class="w-5 sm:w-6 h-5 sm:h-6 block" />
+  <span class="ml-2 text-sm sm:text-base font-semibold">YouTube</span>
+</a>
+
+<!-- Bar Behind YouTube Button -->
+<div class="absolute bottom-0 left-0 w-full h-16 bg-black bg-opacity-50 z-20"></div>
 <style>
   /* Tailwind Custom Animation */
 @keyframes marquee {
